@@ -23,11 +23,11 @@
     "type": "amazon-ebs",
     "run_tags" : {
       "owner" : "{{user `owner`}}",
-      "type" : "{{user `k3s-agent`}}"
+      "type" : "k3s-agent"
     },
     "run_volume_tags" : {
       "owner" : "{{user `owner`}}",
-      "type" : "{{user `k3s-agent`}}"
+      "type" : "k3s-agent"
     }
   }],
   "provisioners": [{
