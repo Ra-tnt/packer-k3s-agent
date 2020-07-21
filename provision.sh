@@ -11,7 +11,7 @@ sudo touch /etc/systemd/system/configK3s.service
 sudo chmod a+rw /etc/systemd/system/configK3s.service
 sudo chmod a+rw /etc/systemd/system/k3s-agent.service.env
 
-cat << EOF > /etc/systemd/system/configK3s.service
+cat << 'EOF' > /etc/systemd/system/configK3s.service
 [Unit]
 Description=Configures the environment for k3s
 After=k3s.target
