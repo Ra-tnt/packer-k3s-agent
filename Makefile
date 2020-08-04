@@ -9,9 +9,10 @@ start:
 		--env OWNER=$$OWNER \
 		-v /var/run/docker.sock:/var/run/docker.sock \
 		-v $$PWD:/$$(basename $$PWD) \
-		-v k3s_token:/token \
+		-v k3s_packer:/token \
 		-w /$$(basename $$PWD) \
 		--name $$(basename $$PWD) \
+		--hostname $$(basename $$PWD) \
 		bryandollery/terraform-packer-aws-alpine
 
 stop:

@@ -38,8 +38,7 @@
     "type": "file",
     "source": "/token/token",
     "destination": "/home/ubuntu/token"
-  },
-  {
+  }, {
     "type": "shell",
     "inline": ["/home/ubuntu/provision.sh"]
   }]
