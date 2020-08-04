@@ -34,6 +34,10 @@
     "type": "file",
     "source": "./provision.sh",
     "destination": "/home/ubuntu/"
+  }, {
+    "type": "file",
+    "source": "/token/token",
+    "destination": "/home/ubuntu/token"
   },
   {
     "type": "shell",
