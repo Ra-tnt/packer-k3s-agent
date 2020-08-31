@@ -41,7 +41,7 @@
   },
    {
     "type": "file",
-    "source": "/token/token",
+    "source": "/token",
     "destination": "/home/ubuntu/token"
   }]
 }
