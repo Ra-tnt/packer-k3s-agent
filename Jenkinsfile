@@ -28,7 +28,8 @@ spec:
   stages {
     stage("plan") {
           steps {
-              sh 'docker run -it -d \
+                  sh """
+		  docker run -it -d \
 	          --env TF_NAMESPACE=$$TF_NAMESPACE \
                   --env OWNER=$$OWNER \
                   -v /var/run/docker.sock:/var/run/docker.sock \
@@ -37,7 +38,8 @@ spec:
                   -w /$$basename $$PWD \
                   --name $$basename $$PWD \
                   --hostname $$basename $$PWD \
-                  bryandollery/terraform-packer-aws-alpine'
+                  bryandollery/terraform-packer-aws-alpine
+		  """
           }
       }
 
