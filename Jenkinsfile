@@ -32,11 +32,11 @@ spec:
 	          --env TF_NAMESPACE=$$TF_NAMESPACE \
                   --env OWNER=$$OWNER \
                   -v /var/run/docker.sock:/var/run/docker.sock \
-                  -v $$PWD:/$$(basename $$PWD) \
+                  -v $$PWD:/$$basename $$PWD \
                   -v k3s_packer:/token \
-                  -w /$$(basename $$PWD) \
-                  --name $$(basename $$PWD) \
-                  --hostname $$(basename $$PWD) \
+                  -w /$$basename $$PWD \
+                  --name $$basename $$PWD \
+                  --hostname $$basename $$PWD \
                   bryandollery/terraform-packer-aws-alpine'
           }
       }
