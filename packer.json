@@ -30,15 +30,16 @@
       "type" : "k3s-agent"
     }
   }],
-  "provisioners": [
-    {
+  "provisioners": [{
     "type": "file",
     "source": "./provision.sh",
     "destination": "/home/ubuntu/"
-  },
-   {
+  }, {
+    "type": "file",
+    "source": "/token/token",
+    "destination": "/home/ubuntu/token"
+  }, {
     "type": "shell",
-    "inline": ["sudo chmod +x provision.sh","./provision.sh"]
-  }
-   ]
+    "inline": ["/home/ubuntu/provision.sh"]
+  }]
 }
