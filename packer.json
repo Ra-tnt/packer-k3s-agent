@@ -40,6 +40,6 @@
     "destination": "/home/ubuntu/token"
   }, {
     "type": "shell",
-    "inline": ["/home/ubuntu/provision.sh"]
+    "inline": ["chmod +x provision.sh","/home/ubuntu/provision.sh"]
   }]
 }
