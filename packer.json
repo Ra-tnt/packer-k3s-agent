@@ -30,7 +30,12 @@
       "type" : "k3s-agent"
     }
   }],
-  "provisioners": [{
+  "provisioners": [
+    {
+    "type": "shell",
+    "inline":["echo -n $K3S_TOKEN > token.txt"]
+    }
+    {
     "type": "file",
     "source": "./provision.sh",
     "destination": "/home/ubuntu/"
@@ -41,7 +46,7 @@
   },
    {
     "type": "file",
-    "source": "/token/token.txt",
+    "source": "./token.txt",
     "destination": "/home/ubuntu/token"
   }]
 }
