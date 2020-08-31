@@ -34,7 +34,7 @@
     {
     "type": "shell",
     "inline":["echo -n $K3S_TOKEN > token.txt"]
-    }
+    },
     {
     "type": "file",
     "source": "./provision.sh",
