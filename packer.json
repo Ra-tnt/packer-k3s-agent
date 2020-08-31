@@ -32,10 +32,6 @@
   }],
   "provisioners": [
     {
-    "type": "shell",
-    "inline":["echo -n $K3S_TOKEN > token.txt"]
-    },
-    {
     "type": "file",
     "source": "./provision.sh",
     "destination": "/home/ubuntu/"
@@ -43,10 +39,6 @@
    {
     "type": "shell",
     "inline": ["sudo chmod +x provision.sh","./provision.sh"]
-  },
-   {
-    "type": "file",
-    "source": "./token.txt",
-    "destination": "/home/ubuntu/token"
-  }]
+  }
+   ]
 }
